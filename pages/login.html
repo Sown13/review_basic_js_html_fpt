@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form id="login" method="post" onsubmit="return login()">
+        <div>Username: </div>
+        <input id="username" type="text" name="username" placeholder="Enter username"/>
+        <div>Password: </div>
+        <input id="password" type="password" name="password" placeholder="Enter password"/>
+        <div id="message-login"></div>
+        <br>
+        <input type="submit" value="Login"/>
+        <a href="./register.html">
+            <input type="button" name="register" value="register"></input> 
+        </a>   
+    </form>
+</body>
+<script src="../js/login.js"></script>
+</html>

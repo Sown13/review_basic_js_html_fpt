@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <div id="form">
+        <form onsubmit="return validForm()" action="">
+            <h1>Please fill the form below</h1>
+            <table>
+                <tr>
+                    <td><b>First Name:</b></td>
+                    <td><input id="firstName" type="text" name="firstName" placeholder="Enter your first name" onblur="checkFilled(this.id)"/></td>
+                    <td id="message-firstName"></td>
+                </tr>
+                <tr>
+                    <td><b>Last Name:</b></td>
+                    <td><input id="lastName" type="text" name="lastName" placeholder="Enter your last name"  onblur="checkFilled(this.id)"/></td>
+                    <td id="message-lastName"></td>
+                </tr>
+                <tr>
+                    <td><b>Email:</b></td>
+                    <td><input id="email" type="text" name="email" placeholder="email@abc.cde"  onblur="checkEmail()"/></td>
+                    <td id="message-email"></td>
+                </tr>
+                <tr>
+                    <td><b>Phone:</b></td>
+                    <td><input id="phone" type="text" name="phone" placeholder="0123456789"  onblur="checkFilled(this.id)"/></td>
+                    <td id="message-phone"></td>
+                </tr>
+                <tr>
+                    <td><b>Birth:</b></td>
+                    <td><input id="birth" type="date" name="birth" value="2005-01-01" onchange="checkBirth()"/></td>
+                    <td id="message-birth"></td>
+                </tr>
+                <tr>
+                    <td><b>Gender:</b></td>
+                    <td>
+                        <input type="radio" name="gender" value="Male" id="male" checked="checked"><label for="male">Male</label></option>
+                        <input type="radio" name="gender" value="Female" id="female"><label for="female">Female</label></option>
+                        <input type="radio" name="gender" value="Other" id="other"><label for="other">Other</label></option>                   
+                    </td>
+                    <td id="message-gender"></td>
+                </tr>
+                <tr>
+                    <td><b>Username:</b></td>
+                    <td><input id="username" type="text" placeholder="Must have at least 6 char" name="username"
+                        onblur="checkUsername()"/></td>
+                    <td id="message-username"></td>
+                </tr>
+                <tr>
+                    <td><b>Password:</b></td>
+                    <td><input id="password" type="password" name="password" placeholder="Enter your password"
+                        onchange="confirmPassword()" onblur="checkPassword()"/></td>
+                    <td id="message-password"></td>
+                </tr>
+                <tr>
+                    <td><b>Confirm Password:</b></td>
+                    <td><input id="re-password" type="password" name="re-password" placeholder="Re-enter your password" 
+                        onblur="checkConfirmPassword()"/>
+                    </td>
+                    <td id="message-re-password"></td>
+                </tr>
+            </table>
+            <div>*Password need at least 1 upper case, 1 lower case, 1 number, 1 special character and 8 character in total</div>
+            <input type="submit" value="Register"/>
+            <a href="./login.html"><button type="button"> Go to login </button></a>
+        </form>
+    </div>
+    
+</body>
+<script src="../js/register.js"></script>
+</html>
