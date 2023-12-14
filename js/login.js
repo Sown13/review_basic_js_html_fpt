@@ -21,5 +21,6 @@ function login() {
 function logout() {
     if(localStorage.getItem('currentUser') !==null){
         localStorage.removeItem('currentUser');
+        window.location.href = "../index.html";
     }
 }
